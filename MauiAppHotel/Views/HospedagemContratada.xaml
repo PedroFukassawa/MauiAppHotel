@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel.Views.HospedagemContratada"
+             Title="HospedagemContratada"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#fcf5e1">
+
+    <VerticalStackLayout Padding="10"
+                         Spacing="10"
+                         VerticalOptions="Center">
+
+        <Label 
+              Text="Hospedagem"
+              FontFamily="LobsterTwoBold"
+              FontSize="38"
+              TextColor="#4c81c7"
+              HorizontalTextAlignment="Center"
+              VerticalTextAlignment="Center"/>
+        
+        <Border StrokeShape="RoundRectangle 7, 7, 7, 7" Padding="3" BackgroundColor="#faebc8" WidthRequest="300">
+
+            <VerticalStackLayout>
+                <Grid RowDefinitions="*, *, *"
+                      ColumnDefinitions="*, *">
+
+                    <Label 
+                         Text="Tipo de hospedagem:"
+                         VerticalOptions="Center" 
+                         FontSize="20"
+                         Margin="10, 0, 0, 0"
+                         TextColor="#317bde"
+                         Grid.Row="0" Grid.Column="0"/>
+
+                    <Label 
+                         Text="{Binding Path=QuartoEscolhido.Nome}"
+                         VerticalOptions="Center" 
+                         FontSize="20"
+                         HorizontalOptions="Center"
+                         TextColor="Black"
+                         Grid.Row="0" Grid.Column="1"/>
+
+                    <Label 
+                        Text="Tempo de estadia:"
+                        VerticalOptions="Center" 
+                        FontSize="20"
+                        TextColor="#317bde"
+                        Margin="10, 10, 0, 0"
+                        Grid.Row="1" Grid.Column="0"/>
+
+                    <Label 
+                         Text="{Binding Estadia}"
+                         VerticalOptions="Center" 
+                         HorizontalOptions="Center"
+                         FontSize="20"
+                         Margin="0, 10, 0, 0"
+                         TextColor="Black"
+                         Grid.Row="1" Grid.Column="1"/>
+
+                    <Label 
+                        Text="Custo total:"
+                        VerticalOptions="Center" 
+                        FontSize="20"
+                        TextColor="#317bde"
+                        Margin="10, 10, 0, 0"
+                        Grid.Row="2" Grid.Column="0"/>
+
+                    <Label 
+                         Text="{Binding TotalHospedagem}"
+                         VerticalOptions="Center" 
+                         HorizontalOptions="Center"
+                         FontSize="20"
+                         Margin="0, 10, 0, 0"
+                         TextColor="Black"
+                         Grid.Row="2" Grid.Column="1"/>
+
+                </Grid>
+            </VerticalStackLayout>
+            
+        </Border>
+
+        <Button Text="Voltar" Clicked="Button_Clicked" BackgroundColor="#5781fa" WidthRequest="120" HorizontalOptions="Center" />
+
+    </VerticalStackLayout>
+    
+</ContentPage>

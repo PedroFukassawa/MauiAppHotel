@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel.Views.Sobre"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#fcf5e1"
+             Title="Sobre">
+
+    <VerticalStackLayout Padding="10"
+                         Spacing="10"
+                         VerticalOptions="Center">
+        <Label 
+             Text="Sobre o desenvolvimento"
+             FontFamily="LobsterTwoBold"
+             FontSize="38"
+             TextColor="#4c81c7"
+             HorizontalTextAlignment="Center"
+             VerticalTextAlignment="Center"/>
+
+        <Border StrokeShape="RoundRectangle 7, 7, 7, 7" Padding="3" BackgroundColor="#faebc8" WidthRequest="390">
+            
+            <VerticalStackLayout>
+                <Label Text="Feito por: Pedro Henrique Fukassawa da Silva"
+                       TextColor="#317bde"
+                       FontSize="18"
+                       Margin="10, 0, 0, 0"/>
+
+                <Label Text="Ano desenvolvido: 2026"
+                       TextColor="#317bde"
+                       FontSize="18"
+                       Margin="10, 10, 0, 0"/>  
+                
+                <Label Text="Objetivo do projeto: Esse projeto tem o objetivo de servir de aplicativo para hospedagens."
+                       TextColor="#317bde"
+                       FontSize="18"
+                       Margin="10, 10, 0, 5"/>
+                
+
+            </VerticalStackLayout>
+        </Border>
+
+        <Button Text="Voltar" BackgroundColor="#5781fa" WidthRequest="120" HorizontalOptions="Center" Clicked="Button_Clicked"/>
+    </VerticalStackLayout>
+</ContentPage>
